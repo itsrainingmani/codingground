@@ -1,10 +1,7 @@
 import random
 import time
 
-def bubblesort(n,m):
-    arr = [0 for x in range(n)]
-    for num in range(0,n):
-        arr[num] = random.randrange(0,m)
+def bubblesort(arr):
     #print (arr)
     start_time = time.time()
     for i in range(0,len(arr)):
@@ -15,12 +12,10 @@ def bubblesort(n,m):
                 arr[j+1] = temp
     
     print("BS--- %s seconds ---" % (time.time() - start_time))
+    return arr
     #print (arr)
 
-def selection_sort(n,m):
-    arr = [0 for x in range(n)]
-    for num in range(0,n):
-        arr[num] = random.randrange(0,m)
+def selection_sort(arr):
     #print (arr)
     start_time = time.time()
     for i in range(0,len(arr)):
@@ -32,12 +27,10 @@ def selection_sort(n,m):
         arr[i] = arr[index_of_min]
         arr[index_of_min] = temp
     print("SS--- %s seconds ---" % (time.time() - start_time))
+    return arr
     #print (arr)
 
-def insertion_sort(n,m):
-    arr = [0 for x in range(n)]
-    for num in range(0,n):
-        arr[num] = random.randrange(0,m)
+def insertion_sort(arr):
     #print (arr)
     start_time = time.time()
     for i in range(1,len(arr)):
@@ -49,4 +42,8 @@ def insertion_sort(n,m):
         arr[j] = x
     #print(arr)
     print("IS--- %s seconds ---" % (time.time() - start_time))
+    return arr
     #print (arr)
+    
+if __name__ == "__main"":
+    main()
